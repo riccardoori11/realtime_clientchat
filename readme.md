@@ -1,3 +1,10 @@
+
+Run it using
+cmake -B build && cmake --build build && ./build/server
+
+
+Was able to handle around 6000 concurrent users, with a p99 and p95 at 1022.7 ms with ~291 messages/sec
+
 All VUs finished. Total time: 1 minute, 33 seconds                             │
                                                                                │
 --------------------------------                                               │
