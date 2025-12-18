@@ -1,38 +1,42 @@
+High-performance WebSocket server in C++ using µWebSockets that handles 12,000 connections over 30 seconds (400/sec arrival rate) with zero failures, achieving a p95 latency of 17ms and p99 of 59ms at 159 messages/sec throughput.
+
 
 Run it using
 cmake -B build && cmake --build build && ./build/server
 
 
-Was able to handle around 6000 concurrent users, with a p99 and p95 at 1022.7 ms (due to added think in artillery.yml) with ~291 messages/sec
 
-All VUs finished. Total time: 1 minute, 33 seconds                             │
+
+
+
+All VUs finished. Total time: 33 seconds                                       │
                                                                                │
 --------------------------------                                               │
-Summary report @ 16:01:02(+0000)                                               │
+Summary report @ 16:19:32(+0000)                                               │
 --------------------------------                                               │
                                                                                │
 vusers.completed: .............................................................│
-. 15000                                                                        │
+. 12000                                                                        │
 vusers.created: ...............................................................│
-. 15000                                                                        │
+. 12000                                                                        │
 vusers.created_by_name.0: .....................................................│
-. 15000                                                                        │
+. 12000                                                                        │
 vusers.failed: ................................................................│
 . 0                                                                            │
 vusers.session_length:                                                         │
   min: ........................................................................│
-. 1000.5                                                                       │
+. 0.9                                                                          │
   max: ........................................................................│
-. 1050.7                                                                       │
+. 216.4                                                                        │
   mean: .......................................................................│
-. 1008.9                                                                       │
+. 8                                                                            │
   median: .....................................................................│
-. 1002.4                                                                       │
+. 6                                                                            │
   p95: ........................................................................│
-. 1022.7                                                                       │
+. 17.3                                                                         │
   p99: ........................................................................│
-. 1022.7                                                                       │
+. 58.6                                                                         │
 websocket.messages_sent: ......................................................│
-. 30000                                                                        │
+. 12000                                                                        │
 websocket.send_rate: ..........................................................│
-. 291/sec
+. 159/sec                                                                      │

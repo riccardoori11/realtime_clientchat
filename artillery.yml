@@ -1,14 +1,12 @@
 config:
-  target: "ws://localhost:9001"    # server to hit
+  target: "ws://localhost:9001"    
   phases:
-    - duration: 30                  # test lasts 60 seconds
-      arrivalRate: 100               # 50 new users per second
-    - duration: 60
-      arrivalRate: 200
+    - duration: 30                  
+      arrivalRate: 400               
+    
 
 scenarios:
-  - engine: ws                      # use WebSocket engine
+  - engine: ws                 
     flow:
-      - send: "Hello"               # send this message
-      - think: 1                    # wait 5 seconds
-      - send: "World"               # send another message
+      - send: "Hello"             
+                 
