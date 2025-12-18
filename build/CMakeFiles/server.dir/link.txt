@@ -1,1 +1,0 @@
-/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/server.dir/link.d CMakeFiles/server.dir/server.cpp.o -o server  /home/ricc/vcpkg/installed/x64-linux/debug/lib/libuSockets.a
